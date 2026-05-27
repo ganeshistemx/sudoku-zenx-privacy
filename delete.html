@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete Your Data – Sudoku ZenX</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; line-height: 1.55; }
+  h1 { border-bottom: 1px solid #ddd; padding-bottom: .4rem; }
+  h2 { margin-top: 2rem; }
+  a { color: #1a5fb4; }
+  code { background: #f3f3f3; padding: 1px 5px; border-radius: 3px; }
+  .meta { color: #666; font-size: .9rem; }
+  .box { background: #f7f7f9; border-left: 4px solid #1a5fb4; padding: .8rem 1rem; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ddd; padding: .5rem .7rem; text-align: left; vertical-align: top; }
+  th { background: #f3f3f3; }
+</style>
+</head>
+<body>
+
+<h1>How to delete your Sudoku ZenX data</h1>
+<p class="meta"><strong>App:</strong> Sudoku ZenX &middot; <strong>Developer:</strong> GameSTEMx &middot; <strong>Last updated:</strong> 27 May 2026</p>
+
+<p>This page explains exactly how to delete the data that the <strong>Sudoku ZenX</strong> app (package <code>com.zenx.sudoku</code>), published by <strong>GameSTEMx</strong>, has collected about you. There are two ways: in-app (instant, recommended) and by email (we process within 30 days).</p>
+
+<h2>Option 1 — Delete in the app (instant)</h2>
+<ol>
+  <li>Open <strong>Sudoku ZenX</strong> on your device.</li>
+  <li>Tap the <strong>menu icon</strong> (top-left of the home screen).</li>
+  <li>Tap <strong>Settings</strong>.</li>
+  <li>Scroll to the <strong>Data</strong> section.</li>
+  <li>Tap <strong>Reset all progress</strong> (red button) and confirm twice.</li>
+</ol>
+<p>This immediately:</p>
+<ul>
+  <li>Clears all on-device data (game progress, statistics, settings, achievements, themes).</li>
+  <li>Deletes your cloud record from our Firebase Firestore database, including <code>users/&lt;your-id&gt;</code>, your public leaderboard entry <code>leaderboard/&lt;your-id&gt;</code>, and your reserved nickname.</li>
+  <li>Cancels any scheduled daily-reminder notifications.</li>
+</ul>
+
+<h2>Option 2 — Email request</h2>
+<p>If you've already uninstalled the app or cannot access it, email us:</p>
+<div class="box">
+  <strong>To:</strong> <a href="mailto:ganesh.istemx@gmail.com?subject=Sudoku%20ZenX%20%E2%80%94%20Data%20deletion%20request">ganesh.istemx@gmail.com</a><br>
+  <strong>Subject:</strong> Sudoku ZenX — Data deletion request<br>
+  <strong>Include:</strong> Your leaderboard nickname, <em>or</em> the Google account email you used to sign in to Google Play Games inside the app.
+</div>
+<p>We will confirm deletion within <strong>30 days</strong> (typically within a few business days).</p>
+
+<h2>What gets deleted vs. kept</h2>
+<table>
+  <thead>
+    <tr><th>Data</th><th>Where stored</th><th>What we do</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Game progress, statistics, settings, achievements</td><td>On your device + Firebase Firestore</td><td><strong>Deleted</strong> immediately</td></tr>
+    <tr><td>Leaderboard nickname &amp; points</td><td>Firebase Firestore (public leaderboard)</td><td><strong>Deleted</strong> immediately; nickname becomes available for someone else after deletion</td></tr>
+    <tr><td>Firebase Authentication user record</td><td>Google Firebase</td><td><strong>Deleted</strong> on request (Option 2 only — Option 1 deletes data but leaves the anonymous auth shell which is wiped automatically by Firebase after inactivity)</td></tr>
+    <tr><td>Google Play Games "Saved Games" cloud save</td><td>Your Google account</td><td>We cannot delete this on your behalf — we don't own it. Delete it yourself via the <strong>Google Play Games app → Settings → Delete Play Games account &amp; data</strong>, or at <a href="https://myaccount.google.com">myaccount.google.com</a>.</td></tr>
+    <tr><td>Firebase Analytics aggregate events</td><td>Google Firebase Analytics</td><td>Anonymous, not linked to your nickname. Retained for up to <strong>14 months</strong> per Firebase's default retention policy; auto-purged after that.</td></tr>
+    <tr><td>Google AdMob advertising ID</td><td>Your device (controlled by Google)</td><td>Reset it yourself: <strong>Android Settings → Google → Ads → Reset advertising ID</strong> (or "Delete advertising ID" on Android 12+).</td></tr>
+    <tr><td>App purchase receipts (if any)</td><td>Your Google Play account</td><td>Retained by Google for tax and refund-eligibility purposes per Google Play policies — we do not control this.</td></tr>
+  </tbody>
+</table>
+
+<h2>Just want to stop using the app?</h2>
+<p>Uninstalling Sudoku ZenX deletes all on-device data but <em>does not</em> delete your cloud record. To fully erase your data, use Option 1 (Reset all progress) <strong>before</strong> uninstalling, or use Option 2 after.</p>
+
+<h2>Questions</h2>
+<p>For any question about deletion or data handling, email <a href="mailto:ganesh.istemx@gmail.com">ganesh.istemx@gmail.com</a>. Also see our full <a href="./">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
+
+<hr>
+<p class="meta"><a href="./">← Privacy Policy</a> &middot; <a href="./terms.html">Terms of Service</a></p>
+
+</body>
+</html>
